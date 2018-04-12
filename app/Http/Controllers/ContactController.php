@@ -9,13 +9,14 @@ class ContactController extends Controller
 {
   public function store()
   {
-    $contact = new Contact;
 
-    $contact->name = request('name');
-    $contact->email = request('email');
-    $contact->message = request('message');
+    $this->validate(request(), [
+      'name' => 'required',
+      'email' => 'required',
+      'message' => 'required'
+    ]);
 
-    $contact->save();
+    Contact::create(request(['name', 'email', 'message']));
 
     return redirect('/');
   }

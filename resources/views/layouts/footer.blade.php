@@ -19,6 +19,14 @@
           <li><input type="submit" value="Send Message" /></li>
         </ul>
       </form>
+
+      <div class="alert">
+        <ul>
+          @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+          @endforeach
+        </ul>
+      </div>
     </section>
     <section class="split contact">
       <section class="alt">
