@@ -22,3 +22,5 @@ Route::get('/generic', function () {
 Route::get('/elements', function () {
     return view('elements');
 });
+
+Route::post('/contact', 'ContactController@store');

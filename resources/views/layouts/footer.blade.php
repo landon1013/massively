@@ -1,7 +1,8 @@
 <!-- Footer -->
   <footer id="footer">
     <section>
-      <form method="post" action="#">
+      <form method="post" action="/contact">
+        {{ csrf_field() }}
         <div class="field">
           <label for="name">Name</label>
           <input type="text" name="name" id="name" />
@@ -27,7 +28,7 @@
       </section>
       <section>
         <h3>Phone</h3>
-        <p><a href="#">(000) 000-0000</a></p>
+        <p><a href="#">(555) 123-4567</a></p>
       </section>
       <section>
         <h3>Email</h3>
