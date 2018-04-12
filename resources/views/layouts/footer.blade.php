@@ -20,13 +20,15 @@
         </ul>
       </form>
 
-      <div class="alert">
-        <ul>
-          @foreach ($errors->all() as $error)
-            <li>{{ $error }}</li>
-          @endforeach
-        </ul>
-      </div>
+      @if (count($errors))
+        <div class="alert">
+          <ul>
+            @foreach ($errors->all() as $error)
+              <li>{{ $error }}</li>
+            @endforeach
+          </ul>
+        </div>
+      @endif
     </section>
     <section class="split contact">
       <section class="alt">
